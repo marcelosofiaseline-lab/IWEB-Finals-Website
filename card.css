@@ -1,0 +1,250 @@
+/* =======================
+   LANDING PAGE (index.html)
+======================= */
+
+/* Header
+.site-header {
+  padding: 20px 10px;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+  */
+
+/* Card Container */
+
+/* Add floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Add glow animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 10px 40px rgba(219, 64, 85, 0.801);
+  }
+  50% {
+    box-shadow: 0 10px 60px rgba(241, 61, 232, 0.8);
+  }
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  padding: 20px;
+  position: relative;
+}
+
+
+.middle-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+
+
+.card {
+  width: 90%;
+  max-width: 350px;
+  aspect-ratio: 3/4;
+  position: relative;
+  animation: float 3s ease-in-out infinite; /* Apply the floating effect */
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  animation: glow 2s ease-in-out infinite; /* Apply the floating effect */
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+/*BUTTON EFFECT*/
+.card-back button {
+  margin-top: 15px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 3px solid #d946ef;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1a0b2e 0%, #4a1942 100%);
+  color: #ff10f0;
+  text-shadow: 0 0 10px #d946ef, 0 0 20px #d946ef;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-bottom: 50px;
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.3),
+              inset 0 0 20px rgba(217, 70, 239, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 1px;
+}
+
+.card-back button::before {
+  content: '🕸️';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.card-back button::after {
+  content: ' 🕸️';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.card-back button:hover {
+  background: linear-gradient(135deg, #0a0015 0%, #2d0a26 100%);
+  color: #fff;
+  border-color: #ff10f0;
+  box-shadow: 0 0 30px rgba(217, 70, 239, 0.8),
+              0 0 50px rgba(217, 70, 239, 0.5),
+              inset 0 0 30px rgba(217, 70, 239, 0.3);
+  text-shadow: 0 0 15px #ff10f0, 0 0 30px #ff10f0;
+  transform: scale(1.05) translateY(-2px);
+  animation: spookyPulse 0.5s ease-in-out infinite alternate;
+}
+
+.card-back button:hover::before {
+  left: 10px;
+  opacity: 1;
+  animation: batFly 1s ease-in-out infinite;
+}
+
+.card-back button:hover::after {
+  right: 10px;
+  opacity: 1;
+  animation: batFly 1s ease-in-out infinite 0.5s;
+}
+
+@keyframes spookyPulse {
+  0% {
+    box-shadow: 0 0 30px rgba(217, 70, 239, 0.8),
+                0 0 50px rgba(217, 70, 239, 0.5),
+                inset 0 0 30px rgba(217, 70, 239, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(255, 16, 240, 0.9),
+                0 0 60px rgba(255, 16, 240, 0.6),
+                inset 0 0 40px rgba(255, 16, 240, 0.4);
+  }
+}
+
+@keyframes batFly {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-60%) rotate(-10deg);
+  }
+}
+
+
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* If you want to remove green screen effect with CSS filter */
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+
+  mix-blend-mode: screen;
+}
+
+/* Make sure your content stays on top */
+.container {
+  position: relative;
+  z-index: 2;
+}

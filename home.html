@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Monster High</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+ 
+  <!-- Font Awesome --> 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css" />
+ 
+</head>
+<body class="home-page">
+<main>
+
+<!-- Header with Navigations -->
+<div class="header">
+  
+  <div class="logo">Monster High</div> 
+
+  <!-- Burger Icon -->
+  <div class="burger" id="burger">
+    <i class="fas fa-bars"></i> <!-- hamburger icon -->
+  </div>
+
+  <nav>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#home" data-page="home.html">Home</a></li>
+    <li><a href="#info" data-page="information.html">Info</a></li>
+    <li><a href="#about" data-page="about.html">About</a></li>
+    <li><a href="#socials" data-page="socials.html">Socials</a></li>
+  </ul>
+</nav>
+</div>
+
+  <!-- Hero Section -->
+<section class="hero" id="home">
+
+    <div class="hero-video-container">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="videos/hero-clip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Dracoulaura</h1>
+      <p class="hero-description">
+        A famed Fontainian magician who possesses great stage presence as well as the gift of the gab. 
+        Audiences are enthralled by his exquisite skills, and they hang on to his every clever word.
+      </p>
+    </div>
+</section>
+
+  <!-- Welcome Section -->
+
+  <div class="welcome-container">
+  <section class="welcome-section">
+    <h2 class="welcome-text">Welcome to Draculaura’s World!</h2>
+  </section>
+
+  <!-- Character Section -->
+  <section class="character-section" id="info">
+  <div class="character-image">
+    <img src="images/logo-dra.png" alt="Draculaoura Image">
+  </div>
+
+  <div class="buttons">
+    <button class="back-button" onclick="window.location.href='index.html';">Back</button>
+    <button class="back-button" onclick="window.location.href='Information.html';">Next</button>
+  </div>
+</section>
+
+</div>
+</main>
+
+   <!-- FOOTER -->
+ <footer class="site-footer">
+  <p class="note">
+    For any concerns regarding the informational nature of this fanpage please visit us
+  </p>
+  <div class="links">
+    <a href="#" aria-label="Instagram">
+      <img src="images/icons/instagram.svg" alt="Instagram Icon">
+    </a>
+    <a href="#" aria-label="Twitter">
+      <img src="images/icons/x.svg" alt="Twitter Icon">
+    </a>
+    <a href="#" aria-label="TikTok">
+      <img src="images/icons/tiktok.svg" alt="TikTok Icon">
+    </a>
+    <a href="#" aria-label="YouTube">
+      <img src="images/icons/facebook.svg" alt="YouTube Icon">
+    </a>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>
