@@ -2,20 +2,6 @@
    LANDING PAGE (index.html)
 ======================= */
 
-/* Header
-.site-header {
-  padding: 20px 10px;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
-}
-
-.site-header h1 {
-  font-size: 2rem;
-  letter-spacing: 2px;
-}
-  */
-
-/* Card Container */
 
 /* Add floating animation */
 @keyframes float {
@@ -27,7 +13,6 @@
   }
 }
 
-/* Add glow animation */
 @keyframes glow {
   0%, 100% {
     box-shadow: 0 10px 40px rgba(219, 64, 85, 0.801);
@@ -70,7 +55,7 @@
   max-width: 350px;
   aspect-ratio: 3/4;
   position: relative;
-  animation: float 3s ease-in-out infinite; /* Apply the floating effect */
+  animation: float 3s ease-in-out infinite;
 }
 
 .card-inner {
@@ -94,7 +79,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-  animation: glow 2s ease-in-out infinite; /* Apply the floating effect */
+  animation: glow 2s ease-in-out infinite;
 }
 
 .card-front img,
@@ -106,33 +91,35 @@
 
 .card-back {
   transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  backface-visibility: hidden;
 }
 
 /*BUTTON EFFECT*/
 .card-back button {
-  margin-top: 15px;
+  margin: 0;
   padding: 12px 30px;
   font-size: 1.1rem;
   font-weight: bold;
-  border: 3px solid #d946ef;
+  border: 3px solid #ef46b7;
   border-radius: 20px;
-  background: linear-gradient(135deg, #1a0b2e 0%, #4a1942 100%);
-  color: #ff10f0;
-  text-shadow: 0 0 10px #d946ef, 0 0 20px #d946ef;
+  background: linear-gradient(135deg, #1a0b2e 0%, #4a1933 100%);
+  color: #ff109b;
+  text-shadow: 0 0 10px #ef46bc, 0 0 20px #ef46ae;
   cursor: pointer;
-  transition: all 0.4s ease;
-  margin-bottom: 50px;
-  box-shadow: 0 0 20px rgba(217, 70, 239, 0.3),
-              inset 0 0 20px rgba(217, 70, 239, 0.1);
-  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(239, 70, 177, 0.3),
+              inset 0 0 20px rgba(239, 70, 171, 0.1);
+  position: absolute;
   overflow: hidden;
   font-family: 'Impact', 'Arial Black', sans-serif;
   letter-spacing: 1px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .card-back button::before {
@@ -160,12 +147,12 @@
 .card-back button:hover {
   background: linear-gradient(135deg, #0a0015 0%, #2d0a26 100%);
   color: #fff;
-  border-color: #ff10f0;
-  box-shadow: 0 0 30px rgba(217, 70, 239, 0.8),
-              0 0 50px rgba(217, 70, 239, 0.5),
+  border-color: #ff29b0;
+  box-shadow: 0 0 30px rgba(239, 70, 191, 0.8),
+              0 0 50px rgba(239, 70, 124, 0.5),
               inset 0 0 30px rgba(217, 70, 239, 0.3);
-  text-shadow: 0 0 15px #ff10f0, 0 0 30px #ff10f0;
-  transform: scale(1.05) translateY(-2px);
+  text-shadow: 0 0 15px #ff109f, 0 0 30px #ff1097;
+  transform: translateX(-50%) translateY(-2px) scale(1.05);
   animation: spookyPulse 0.5s ease-in-out infinite alternate;
 }
 
@@ -181,11 +168,18 @@
   animation: batFly 1s ease-in-out infinite 0.5s;
 }
 
+.draculaura-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 @keyframes spookyPulse {
   0% {
-    box-shadow: 0 0 30px rgba(217, 70, 239, 0.8),
-                0 0 50px rgba(217, 70, 239, 0.5),
-                inset 0 0 30px rgba(217, 70, 239, 0.3);
+    box-shadow: 0 0 30px rgba(239, 70, 180, 0.8),
+                0 0 50px rgba(239, 70, 177, 0.5),
+                inset 0 0 30px rgba(239, 70, 188, 0.3);
   }
   100% {
     box-shadow: 0 0 40px rgba(255, 16, 240, 0.9),
@@ -228,7 +222,6 @@
   object-fit: cover;
 }
 
-/* If you want to remove green screen effect with CSS filter */
 .video-background video {
   position: absolute;
   top: 50%;
@@ -243,8 +236,29 @@
   mix-blend-mode: screen;
 }
 
-/* Make sure your content stays on top */
 .container {
   position: relative;
   z-index: 2;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image:
+    linear-gradient(rgba(255,182,193,0.4), rgba(120,20,40,0.4)),
+    url("images/card-background.jpg");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  background-blend-mode: overlay;
+}
+
+.video-background {
+  background: url("images/card-background.jpg") repeat center center fixed;
+  background-size: 200px 200px;
+  z-index: 0;
+}
+.video-background video { z-index: 1; position: relative; mix-blend-mode: screen; opacity: 0.85; }
+.container { z-index: 2; }
