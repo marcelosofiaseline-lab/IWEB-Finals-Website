@@ -80,7 +80,7 @@ main {
   font-weight: bold;
 }
 
-.lyney-img {
+.Draculaura-img {
   width: 100px;
   border-radius: 10px;
   margin-top: 15px;
@@ -132,49 +132,4 @@ main {
   padding: 8px 20px;
   border-radius: 20px;
   font-weight: bold;
-}
-
-.art-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.art-card {
-  background: #fcd6e6;
-  border-radius: 15px;
-  padding: 10px;
-  width: 160px;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
-}
-
-.art-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f49ac2;
-  color: white;
-  font-size: 0.9rem;
-  margin-top: 40px;
-}
-
-footer .genshin-logo {
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-footer .socials a {
-  color: white;
-  margin: 0 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer .socials a:hover {
-  text-decoration: underline;
 }
