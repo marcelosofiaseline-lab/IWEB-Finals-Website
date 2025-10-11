@@ -4,15 +4,6 @@
 
 
 /* Add floating animation */
-
-body {
-  font-family: "P22 Muschamp Pro", serif;
-}
-
-h1, .some-class {
-  font-family: "P22 Muschamp Pro", serif;
-}
-
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
