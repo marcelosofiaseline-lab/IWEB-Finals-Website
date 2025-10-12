@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const enterBtn = document.getElementById("enterBtn");
   if (enterBtn) {
     enterBtn.addEventListener("click", () => {
-      window.location.href = "../home.html";
+      window.location.href = "home.html";
     });
   }
 
