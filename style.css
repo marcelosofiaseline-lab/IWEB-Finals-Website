@@ -639,6 +639,15 @@ background: linear-gradient(135deg, #f3f0f0 0%, #681950 30%, #bd0a6c 60%, #d4191
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
 
+  .search-button {
+  text-decoration: none;
+  display: inline-block;
+  }
+
+  .search-button:hover {
+  text-decoration: none;
+  }
+
   .back-link {
     text-align: center;
     margin-top: 20px;
