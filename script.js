@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const enterBtn = document.getElementById("enterBtn");
   if (enterBtn) {
     enterBtn.addEventListener("click", () => {
-      window.location.href = "home.html";
+      window.location.href = "../home.html";
     });
   }
 
@@ -24,20 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
-//PAGE 
+// PAGE navigation
 const navLinks = document.querySelectorAll('.nav-menu a');
 
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     const page = this.getAttribute('data-page');
     
-    // If data-page exists, navigate to that page
     if (page) {
-      e.preventDefault(); // Prevent default anchor behavior
-      window.location.href = page; // Use the page variable, not hardcoded value
+      e.preventDefault();
+      window.location.href = page;
     }
-    // Otherwise, it will work as a normal anchor link for same-page sections
   });
 });
