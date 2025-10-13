@@ -24,18 +24,19 @@
 
   <!-- Burger Icon -->
   <div class="burger" id="burger">
-    <i class="fas fa-bars"></i>
+    <i class="fas fa-bars"></i> <!-- hamburger icon -->
   </div>
 
   <nav>
   <ul class="nav-menu" id="navMenu">
     <li><a href="#home" data-page="home.html">Home</a></li>
-    <li><a href="#info" data-page="information.html">Info</a></li>
+    <li><a href="#info" data-page="Information.html">Info</a></li>
     <li><a href="#about" data-page="about.html">About</a></li>
   </ul>
 </nav>
 </div>
 
+  <!-- Hero Section -->
 <section class="hero" id="home">
 
     <div class="hero-video-container">
@@ -53,10 +54,14 @@
     </div>
 </section>
 
+  <!-- Welcome Section -->
+
   <div class="welcome-container">
   <section class="welcome-section">
     <h2 class="welcome-text">Welcome to Draculaura’s World!</h2>
   </section>
+
+  <!-- Character Section -->
   <section class="character-section" id="info">
   <div class="character-image">
     <img src="logo-dra.png" alt="Draculaoura Image">
@@ -73,13 +78,13 @@
     </div>
     
     <div class="info-item">
+      <span class="info-label">Pet Name:</span>
+      <span class="info-value">Count Fabulous</span>
+    </div>
+    
+    <div class="info-item">
       <span class="info-label">Age:</span>
       <span class="info-value">1,599 years</span>
-    </div>
-
-    <div class="info-item">
-      <span class="info-label">Pet Name:</span>
-      <span class="info-value">Pink</span>
     </div>
     
     <div class="info-item">
@@ -97,11 +102,6 @@
     <h3 class="section-title">Freaky Flaw</h3>
     <p>Since I can't see my reflection in a mirror, I have to leave the house not knowing if my clothes and makeup are just right. Of course after 1,599 years of practice I've gotten pretty good at it.</p>
   </div>
-  
-  <div class="info-item">
-      <span class="info-label">Pet Name:</span>
-      <span class="info-value">Count Fabulous</span>
-    </div>
 
   <div class="info-section">
     <h3 class="section-title">Favorite Food</h3>
@@ -141,14 +141,15 @@
 
   <div class="buttons">
     <button class="back-button" onclick="window.location.href='index.html';">Back</button>
-    <button class="back-button" onclick="window.location.href='information.html';">Next</button>
+    <button class="back-button" onclick="window.location.href='Information.html';">Next</button>
   </div>
 
 
 </div>
 </main>
 
-<footer class="site-footer">
+   <!-- FOOTER -->
+ <footer class="site-footer">
   <p class="note">
     For any concerns regarding the informational nature of this fanpage please visit us
   </p>
@@ -168,12 +169,11 @@
   </div>
 </footer>
 
-  <!-- Background Music (Hidden) -->
-  <audio id="bgMusic" loop>
-    <source src="Monster_high_song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
+<!-- Background Music (Hidden) -->
+<audio id="bgMusic" loop>
+  <source src="Monster_high_song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 <script src="script.js"></script>
 </body>
 </html>
