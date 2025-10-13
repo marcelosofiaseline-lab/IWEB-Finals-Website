@@ -1,6 +1,13 @@
 /* =======================
    GLOBAL BASE STYLES
 ======================= */
+/* Hidden Background Music */
+#bgMusic {
+  display: none;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;

@@ -2,6 +2,11 @@
    LANDING PAGE (index.html)
 ======================= */
 
+/* Hidden Background Music */
+#bgMusic {
+  display: none;
+}
+
 /* Add floating animation */
 @keyframes float {
   0%, 100% {
@@ -32,7 +37,6 @@
   min-height: 100vh;
   z-index: 2;
 }
-
 
 .middle-title {
   position: absolute;
