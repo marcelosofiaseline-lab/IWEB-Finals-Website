@@ -945,8 +945,6 @@ body.home-page {
 /* Tablet */
 @media (min-width:768px) and (max-width:1023px) {
 
-/*Info page*/
-
   .character-name {
     font-size: 1.5rem;
   }
@@ -1176,12 +1174,12 @@ body.home-page {
   .character-info-box {
     padding: 1.5rem;
     margin: 1rem;
-    max-width:100% ; /**/
+    max-width:100% ;
     width: 100%;
   }
 
   .info-grid {
-    grid-template-columns: 1fr; /**/
+    grid-template-columns: 1fr;
      gap: 0.8rem;
   }
 
@@ -1203,7 +1201,7 @@ body.home-page {
   }
 
   .section-title {
-    font-size: 1rem; /**/
+    font-size: 1rem;
   }
   .info-section {
     padding: 0.8rem;
