@@ -1,6 +1,13 @@
 /* =======================
    GLOBAL BASE STYLES
 ======================= */
+/* Hidden Background Music */
+#bgMusic {
+  display: none;
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +34,7 @@ body {
 }
 
 body.home-page,body.info-page{
- background: linear-gradient(135deg, #F7DCE5, #E185B4, #744C66, #3A0F20);
+ background: linear-gradient(135deg, #4e1838, #771d4ff8, #df8ac5, #3a0f29);
 }
 
 section {
@@ -66,6 +73,7 @@ section {
 /* =======================
    HOME PAGE (home.html)
 ======================= */
+
 
 main {
   display: flex;
@@ -223,6 +231,8 @@ body.home-page {
   font-weight: 700;
   text-align: center;
   position: relative;
+  text-shadow:   2px 2px 0 white,
+                   0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -249,34 +259,34 @@ body.home-page {
 .character-info-box {
   max-width: 800px;
   margin: 2rem auto;
-  background: rgba(0, 0, 0, 0.7);
-  border: 3px solid rgba(255, 105, 180, 0.8);
+  background: rgba(0, 0, 0, 0.877);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(10px);
 }
 
 .info-title {
-  
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 3rem);
   text-align: center;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #fcfcfc 0%, #ffffff 30%, #bd0a6c 60%, #9b0c5f 100%);
+  background: linear-gradient(135deg, #e67bcb 0%, #972675 30%, #cc358d 60%, #9b0c5f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
+  filter: drop-shadow(0 1 10px rgba(255, 176, 255, 0.932));
+
 }
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .info-item {
-  background: rgba(255, 105, 180, 0.2);
+  background: rgba(168, 72, 140, 0.418);
   border-radius: 10px;
   padding: 1rem;
   display: flex;
@@ -286,7 +296,7 @@ body.home-page {
 
 .info-label {
   font-weight: bold;
-  color: #ff69b4;
+  color: #fc75cf;
   font-size: 0.9rem;
 }
 
@@ -299,8 +309,9 @@ body.home-page {
   margin-bottom: 1.5rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
-  border-left: 4px solid #ff69b4;
+  border-left: 5px solid #ff69b4;
   border-radius: 8px;
+  
 }
 
 .section-title {
@@ -316,6 +327,7 @@ body.home-page {
   font-size: 1rem;
 }
 
+/*Character image in home.html*/
 .character-section button {
   margin-top: 30px;
 }
@@ -377,18 +389,18 @@ body.info-page{
   
   font-family: 'Dancing Script', cursive;
   font-size: clamp(2.5rem, 6vw, 4rem);
-background: linear-gradient(135deg, #f3f0f0 0%, #681950 30%, #bd0a6c 60%, #d41919 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    background-size: 200% auto;
+  background: linear-gradient(135deg, #f3f0f0 0%, #681950 30%, #bd0a6c 60%, #d41919 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
     
-    filter: drop-shadow(0 0 15px rgba(129, 7, 99, 0.9))
-            drop-shadow(0 0 25px rgba(255, 105, 210, 0.6))
-            drop-shadow(0 0 35px rgba(255, 0, 191, 0.4));
-  
-    letter-spacing: 3px;
-    font-weight: 700;
+  filter: drop-shadow(0 0 15px rgba(129, 7, 99, 0.9))
+          drop-shadow(0 0 25px rgba(255, 105, 210, 0.6))
+          drop-shadow(0 0 35px rgba(255, 0, 191, 0.4));
+
+  letter-spacing: 3px;
+  font-weight: 700;
     
 }
 
@@ -631,15 +643,6 @@ background: linear-gradient(135deg, #f3f0f0 0%, #681950 30%, #bd0a6c 60%, #d4191
   .search-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-
-  .search-button {
-  text-decoration: none;
-  display: inline-block;
-  }
-
-  .search-button:hover {
-  text-decoration: none;
   }
 
   .back-link {
@@ -942,6 +945,8 @@ body.home-page {
 /* Tablet */
 @media (min-width:768px) and (max-width:1023px) {
 
+/*Info page*/
+
   .character-name {
     font-size: 1.5rem;
   }
@@ -980,6 +985,10 @@ body.home-page {
 .icon-symbol {
   font-size: 1.8rem;
 }
+
+
+
+
 
 .artworks-section {
     flex-direction: column;
@@ -1043,6 +1052,7 @@ body.home-page {
 
 /* Mobile and small tablets */
 @media (max-width:767px) {
+
 
 .character-name {
     font-size: 1.3rem;
@@ -1164,27 +1174,49 @@ body.home-page {
   }
 
   .character-info-box {
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 1rem;
-    max-width:400px ;
+    max-width:100% ; /**/
+    width: 100%;
   }
 
   .info-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /**/
+     gap: 0.8rem;
   }
 
-  .info-title {
-    font-size: 2rem;
+  .info-item {
+    padding: 0.8rem;
   }
 
-  .section-title {
-    font-size: 1.1rem;
+  .info-label {
+    font-size: 0.85rem;
   }
 
-  .info-section p {
+  .info-value {
     font-size: 0.9rem;
   }
 
+  .info-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1rem; /**/
+  }
+  .info-section {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-section p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+
+/*Hero Section (home.html)*/
   .hero-video {
     object-position: 90% 40%; 
   }
