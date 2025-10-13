@@ -29,10 +29,11 @@ body {
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   color: #fff;
- 
 }
 
-body.home-page,body.info-page{
+
+
+body.home-page,body.info-page,body.about-page{
  background: linear-gradient(135deg, #4e1838, #771d4ff8, #df8ac5, #3a0f29);
 }
 
@@ -40,9 +41,97 @@ section {
   padding: 2rem 1rem;
 }
 
+
+/*About Page*/
+/* Mission Section */
+  .mission-section,.team-section {
+   flex-direction: column;
+    display: flex;
+  }
+
+  /* Features Grid */
+  .features-section {
+    margin-bottom: 30px;
+  }
+
+    .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .feature-card {
+    background: rgba(168, 72, 140, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+  }
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+  }
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #ff69b4;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff69b4;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Team Section */
+.team-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-left: 5px solid #bd0a6c;
+}
+
+.team-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .value-tag {
+    background: rgba(189, 10, 108, 0.3);
+    color: #ffb3d9;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 105, 180, 0.4);
+  }
+
+.about-container {
+  max-width: 800px;
+  margin: 120px auto 60px auto;
+  background: rgb(15, 1, 1, 0.8);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  text-align: left;
+}
+
 /* Footer (used by both pages) */
-
-
 .site-footer {
   text-align: center;
   padding: 10px 20px;
@@ -134,14 +223,11 @@ body.home-page {
   text-shadow: 0 0 10px rgba(230, 201, 206, 0.8),
                0 0 20px rgba(230, 201, 206, 0.6),
                0 0 30px rgba(230, 201, 206, 0.4);
-  
 }
-
 
 .nav-menu a:hover {
   transform: scale(1.1);
   filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,0.8));
-  
 }
 
 /* Hero Section */
@@ -320,10 +406,10 @@ body.home-page {
 }
 
 .section-title {
+  font-size: 2.2rem;
   color: #ff69b4;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
 }
 
 .info-section p {
@@ -339,7 +425,7 @@ body.home-page {
 
 .buttons{
   display: flex;
-  gap: 3rem;
+  gap: 10rem;
   justify-content: center;
   margin: 0px;
 }
@@ -423,8 +509,7 @@ body.info-page{
    
     }
 
-  .character-card-info {
-    
+  .character-card-info,.mission-section,.team-section {
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 20px;
@@ -843,20 +928,61 @@ body.info-page{
 /* Tablet */
 @media (min-width:768px) and (max-width:1023px) {
 
+.back-button{
+  font-size: 1rem;
+  padding: 12px 60px;
+  }
+
+body.about-page{
+  padding-top: 60px;
+}
+/*About page*/
+.about-container {
+  max-width: 700px;
+  padding: 30px;
+  margin: 30px auto;
+}
+
+.main-title {
+  font-size: 2.8rem;
+}
+
+.section-title {
+  font-size: 1.9rem;
+}
+
+.character-description {
+  font-size: 1rem;
+}
+
+.character-card-info,
+  .mission-section,
+  .team-section {
+    padding: 25px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-icon {
+    font-size: 2.2rem;
+  }
+
 .info-grid {
  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 /*Info page*/
 
-  .character-name {
-    font-size: 1.5rem; /* Adjust as needed */
-  }
+.character-name {
+  font-size: 1.5rem; /* Adjust as needed */
+}
 
-  .character-description {
-    font-size: 0.85rem; /* Adjust as needed */
-    line-height: 1.6;
-  }
+.character-description {
+  font-size: 0.85rem; /* Adjust as needed */
+  line-height: 1.6;
+}
 
 .main-title {
   font-size: 2.5em;
@@ -955,7 +1081,75 @@ body.info-page{
 /* Mobile and small tablets */
 @media (max-width:767px) {
 
+.character-card-info,
+.mission-section,
+.team-section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
+.character-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.mission-section p,
+.team-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.features-grid {
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.feature-card {
+  padding: 20px;
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+.feature-title {
+  font-size: 1.1rem;
+}
+
+.feature-description {
+  font-size: 0.9rem;
+}
+
+.team-values {
+  gap: 10px;
+}
+
+.value-tag {
+  font-size: 0.85rem;
+  padding: 8px 16px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+.logo {
+      font-size: 1.5rem;
+    }
+.about-container {
+      max-width: 95%;
+      padding: 20px;
+      margin: 20px auto;
+    }
+
+body.about-page{
+  padding-top: 50px;
+}
+
+  .buttons{
+    gap:4rem;
+  }
 /*Info page*/
 .character-name {
     font-size: 1.3rem; /* Smaller for mobile */
@@ -1201,7 +1395,6 @@ body.info-page{
 
 .back-button{
   font-size: 1rem;
-  padding: 12px 20px;
-  
+  padding: 12px 60px;
   }
 }

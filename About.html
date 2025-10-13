@@ -1,75 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Monster High</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
 
-  <body class="info-page">
-    <div class="header">
-      <div class="logo">Vamp Vogue</div>
-      <div class="burger" id="burger">
-        <i class="fas fa-bars"></i>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="about-page">
+<main>   
+ <!-- Header with Navigations -->
+<div class="header">
+  <div class="logo">Vamp Vogue</div> 
+
+  <!-- Burger Icon -->
+  <div class="burger" id="burger">
+    <i class="fas fa-bars"></i> <!-- hamburger icon -->
+  </div>
+
+  <nav>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" data-page="home.html">Home</a></li>
+      <li><a href="#info" data-page="information.html">Info</a></li>
+      <li><a href="#about" data-page="About.html">About</a></li>
+    </ul>
+  </nav>
+</div>
+
+    <!-- About Section -->
+    <div class="about-container">
+      <h1 class="main-title">About Us</h1>
+      <div class="character-card-info">
+        <div class="character-content">
+          <p class="character-description">
+            This site is a fan page dedicated to <strong>Draculaura</strong> — the stylish, kind-hearted, and drama-loving vampire from Monster High.
+            As the daughter of Dracula, she brings her own twist to vampire life with a flair for fashion, a compassionate heart, and a strong sense of self.
+            <br><br>
+            We created this space for fans who adore her signature pink-and-goth aesthetic, her bubbly personality, and her unforgettable role in the Monster High world.
+            Whether you're here for the fashion, the stories, or just some good vibes, you're in the right place.
+            <br><br>
+            So grab your parasol, strike a pose, and get ready to vamp it up.
+          </p>
+        </div>
       </div>
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="information.html">Info</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
+    
 
-    <main>
-      <section class="container">
-        <h1 class="main-title">About Us</h1>
-        <div class="character-card-info">
-          <div class="character-content">
-            <p class="character-description">
-              This site is a fan page dedicated to <strong>Draculaura</strong> — the stylish, kind-hearted, and drama-loving vampire from Monster High.
-              As the daughter of Dracula, she brings her own twist to vampire life with a flair for fashion, a compassionate heart, and a strong sense of self.
-              <br><br>
-              We created this space for fans who adore her signature pink-and-goth aesthetic, her bubbly personality, and her unforgettable role in the Monster High world.
-              Whether you're here for the fashion, the stories, or just some good vibes, you're in the right place.
-              <br><br>
-              So grab your parasol, strike a pose, and get ready to vamp it up.
-            </p>
+    <!-- Mission Section -->
+      <div class="mission-section">
+        <h2 class="main-title">Our Mission</h2>
+        <p class="character-description">
+          We're here to celebrate everything that makes Draculaura special — from her iconic style evolution to her inspiring messages about self-acceptance and kindness.
+          This fanpage is a tribute to a character who taught us that being different is something to embrace, not hide.
+        </p>
+        <p class="character-description">
+          Through curated content, artwork, and community engagement, we aim to keep the Monster High spirit alive for longtime fans and introduce new generations to the fang-tastic world of Draculaura.
+        </p>
+      </div>
+
+        <!-- Features Section -->
+      <div class="features-section">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 25px;">What You'll Find</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">ᯓ★</div>
+            <h3 class="feature-title">Fashion Archive</h3>
+            <p class="feature-description">Explore Draculaura's iconic outfits and style evolution throughout the years</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">𓂃🖌</div>
+            <h3 class="feature-title">Fan Art Gallery</h3>
+            <p class="feature-description">Discover amazing artwork from talented artists in the Monster High community</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🕮</div>
+            <h3 class="feature-title">Character Deep Dives</h3>
+            <p class="feature-description">Learn about Draculaura's personality, relationships, and memorable moments</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">❤︎</div>
+            <h3 class="feature-title">Community Love</h3>
+            <p class="feature-description">Connect with fellow fans who share your passion for Monster High</p>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p class="note">
-        For any concerns regarding the informational nature of this fanpage please visit us
-      </p>
-      <div class="links">
-        <a href="https://www.instagram.com/draculaura.postings/?igsh=MTNlYTdyZTZsYjl6Ng%3D%3D&fbclid=IwY2xjawNYybdleHRuA2FlbQIxMQABHrHKLEQmo3nemHkkbz6t5LuM0cIVVJA52_CmCQo_xTc66D-uv2rUJyDzJOYQ_aem_TwzUnB0pNI7nO-XuT--Mbw#" aria-label="Instagram">
-          <img src="instagram.svg" alt="Instagram Icon">
-        </a>
-        <a href="https://x.com/draculaura?lang=en&fbclid=IwY2xjawNYyY9leHRuA2FlbQIxMQABHgwurLK_Ui_0ohug2b-wa6KYYVi5resF-GvIfnbCbrAV9QzD1UgxtTWRNXyg_aem_SFbkbxS0aoeVz8hNBzgizQ" aria-label="Twitter">
-          <img src="x.svg" alt="Twitter Icon">
-        </a>
-        <a href="https://www.tiktok.com/@ghoul264?_t=ZS-90UgJoApT4U&_r=1&fbclid=IwY2xjawNYyaNleHRuA2FlbQIxMQABHt1E4D57JUbax3rpT5HWZj-0jAqufh4ncQicGPIEXB3oZdVurJMQnUgriy1w_aem_Nv_90ixLWgK7YsDImAEp1w" aria-label="TikTok">
-          <img src="tiktok.svg" alt="TikTok Icon">
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100069321634843" aria-label="YouTube">
-          <img src="facebook.svg" alt="Facebook Icon">
-        </a>
       </div>
-    </footer>
+
+       <div class="team-section">
+        <h2 class="main-title">Created By Fans, For Fans</h2>
+        <p>
+          We're a passionate group of Monster High enthusiasts who grew up with these characters and want to preserve their legacy.
+          This project is made with love, nostalgia, and an appreciation for the positive impact Monster High has had on so many lives.
+        </p>
+        <p style="margin-top: 15px; font-weight: 600; color: #ff69b4;">
+          Our Values:
+        </p>
+        <div class="team-values">
+          <span class="value-tag">𓆩^._.^𓆪 Creativity</span>
+          <span class="value-tag">𓆩❤︎𓆪 Inclusivity</span>
+          <span class="value-tag">✮⋆˙ Authenticity</span>
+          <span class="value-tag">.☘︎ ݁˖Self-Expression</span>
+          <span class="value-tag">𐦂𖨆𐀪𖠋 Community</span>
+        </div>
+      </div>
+    </div>
+    </div>
+
+     <div class="buttons">
+    <button class="back-button" onclick="window.location.href='information.html';">Back</button>
+  </div>
 
 
-  <!-- Background Music (Hidden) -->
-  <audio id="bgMusic" loop>
-    <source src="Monster_high_song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-    <script src="script.js"></script>
-  </body>
+    <!-- FOOTER -->
+ <footer class="site-footer">
+  <p class="note">
+    For any concerns regarding the informational nature of this fanpage please visit us
+  </p>
+   <div class="links">
+    <a href="https://www.instagram.com/draculaura.postings/?igsh=MTNlYTdyZTZsYjl6Ng%3D%3D&fbclid=IwY2xjawNYybdleHRuA2FlbQIxMQABHrHKLEQmo3nemHkkbz6t5LuM0cIVVJA52_CmCQo_xTc66D-uv2rUJyDzJOYQ_aem_TwzUnB0pNI7nO-XuT--Mbw#" aria-label="Instagram">
+      <img src="instagram.svg" alt="Instagram Icon">
+    </a>
+    <a href="https://x.com/draculaura?lang=en&fbclid=IwY2xjawNYyY9leHRuA2FlbQIxMQABHgwurLK_Ui_0ohug2b-wa6KYYVi5resF-GvIfnbCbrAV9QzD1UgxtTWRNXyg_aem_SFbkbxS0aoeVz8hNBzgizQ" aria-label="Twitter">
+      <img src="x.svg" alt="Twitter Icon">
+    </a>
+    <a href="https://www.tiktok.com/@ghoul264?_t=ZS-90UgJoApT4U&_r=1&fbclid=IwY2xjawNYyaNleHRuA2FlbQIxMQABHt1E4D57JUbax3rpT5HWZj-0jAqufh4ncQicGPIEXB3oZdVurJMQnUgriy1w_aem_Nv_90ixLWgK7YsDImAEp1w" aria-label="TikTok">
+      <img src="tiktok.svg" alt="TikTok Icon">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100069321634843" aria-label="YouTube">
+      <img src="facebook.svg" alt="Facebook Icon">
+    </a>
+  </div>
+</footer>
+
+
+    
+  </main>
+<!-- Background Music (Hidden) -->
+<audio id="bgMusic" loop>
+  <source src="Monster_high_song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+  <script src="script.js"></script>
+</body>
 </html>
