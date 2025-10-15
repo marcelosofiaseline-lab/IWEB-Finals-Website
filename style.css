@@ -131,7 +131,7 @@ section {
   text-align: left;
 }
 
-/* Footer (used by both pages) */
+/* Footer */
 .site-footer {
   text-align: center;
   padding: 10px 20px;
@@ -165,14 +165,11 @@ section {
    HOME PAGE (home.html)
 ======================= */
 
-
-
 main {
   display: flex;
   flex-direction: column;
   flex: 1; /* lets body flexbox control height */
   min-height: auto; /* remove forced height */
-  
   
 }
 
@@ -249,7 +246,7 @@ body.home-page {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* makes video act like background image */
+  object-fit: cover;
   z-index: 0;
   object-position: center 30%; 
   
@@ -290,7 +287,7 @@ body.home-page {
 /* Welcome Section */
 .welcome-container{
   width: 70%;
-  margin: 0 auto; /* Centers horizontally */
+  margin: 0 auto;
   padding: 2rem 0;
   
 }
@@ -306,14 +303,12 @@ body.home-page {
   font-family: 'Dancing Script', cursive;
   font-size: clamp(2rem, 6vw, 3.5rem);
   
-  /* Draculaura's signature colors - hot pink and black gradient */
   background: linear-gradient(135deg, #000000 0%, #6d044d 30%, #bd0a6c 60%, #d41919 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% auto;
-  
-  /* Hot pink glow effect (Draculaura's main color) */
+ 
   filter: drop-shadow(0 0 15px rgba(129, 7, 99, 0.9))
           drop-shadow(0 0 25px rgba(255, 105, 210, 0.6))
           drop-shadow(0 0 35px rgba(255, 0, 191, 0.4));
@@ -331,7 +326,7 @@ body.home-page {
 .character-image {
   width: min(250px, 70vw);
   height: auto;
-  aspect-ratio: 1 / 1; /* keeps it a circle */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   margin: 0 auto;
   
@@ -343,7 +338,7 @@ body.home-page {
 }
 
 .character-section {
-  text-align: center; /* centers all text inside */
+  text-align: center;
 }
 
 /* Character Info Box */
@@ -420,7 +415,7 @@ body.home-page {
 
 /*Character image in home.html*/
 .character-section button {
-  margin-top: 30px; /* space between image and text */
+  margin-top: 30px; 
 }
 
 .buttons{
@@ -760,12 +755,11 @@ body.info-page{
   }
 
 /* Artworks Title */
-
 .Artworks {
   border-top: 2px solid rgb(5, 5, 5);
   margin-top: 80px;
   background: linear-gradient(135deg, #6b3e4d, #991358, #50203e, #ac7c8f);
-  padding: 30px 0; /* Add vertical padding */
+  padding: 30px 0; 
   width: 100%;
     
   }
@@ -876,7 +870,7 @@ body.info-page{
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(189, 10, 108, 0.2); /* Pink overlay */
+  background: rgba(189, 10, 108, 0.2); 
   pointer-events: none;
   animation: pulseGlow 1.5s ease-in-out infinite;
 }
@@ -908,7 +902,7 @@ body.info-page{
 }
 
 .artwork:hover .artwork-text {
-  background: rgba(0, 0, 0, 0.541); /* Brighter background on hover */
+  background: rgba(0, 0, 0, 0.541);
   backdrop-filter: blur(5px);
 }
 
@@ -982,11 +976,11 @@ body.about-page{
 /*Info page*/
 
 .character-name {
-  font-size: 1.5rem; /* Adjust as needed */
+  font-size: 1.5rem; 
 }
 
 .character-description {
-  font-size: 0.85rem; /* Adjust as needed */
+  font-size: 0.85rem; 
   line-height: 1.6;
 }
 
@@ -1060,7 +1054,7 @@ body.about-page{
     transform: none;
   }
 
-  /* Optional: Add tap effect */
+
   .artwork:active img {
     transform: scale(0.98);
   }
@@ -1073,7 +1067,7 @@ body.about-page{
   }
   
    .hero-title {
-    font-size: 2rem; /* smaller than desktop */
+    font-size: 2rem; 
   }
   .hero-description  {
     font-size: 13px;
@@ -1158,16 +1152,16 @@ body.about-page{
   }
 /*Info page*/
 .character-name {
-    font-size: 1.3rem; /* Smaller for mobile */
+    font-size: 1.3rem; 
   }
 
   .character-description {
-    font-size: 0.85rem; /* Smaller for mobile */
+    font-size: 0.85rem; 
     line-height: 1.5;
   }
 
   body.info-page {
-    padding-top: 70px; /* Smaller header on mobile */
+    padding-top: 70px; 
   }
   .container {
     padding: 15px;
@@ -1246,8 +1240,6 @@ body.about-page{
     flex: none;
   }
 
-
-
   /* Show text by default on mobile */
   .artwork-text {
     opacity: 1;
@@ -1276,7 +1268,6 @@ body.about-page{
     transform: none;
   }
 
-  /* Optional: Add tap effect */
   .artwork:active img {
     transform: scale(0.98);
   }
@@ -1313,7 +1304,7 @@ body.about-page{
   }
 
   .section-title {
-    font-size: 1rem; /**/
+    font-size: 1rem; 
   }
   .info-section {
     padding: 0.8rem;
@@ -1355,7 +1346,7 @@ body.about-page{
 
   .nav-menu {
   position: fixed;
-  top: -300px; /* Position below the header */
+  top: -300px; 
   right: -250px;
   height: auto; 
   width: 170px;
@@ -1365,7 +1356,7 @@ body.about-page{
   gap: 1.5rem;
   transition: top 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   z-index: 2000;
-  border-radius: 0 0 0 15px; /* Rounded bottom-left corner */
+  border-radius: 0 0 0 15px; 
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
   
   }
